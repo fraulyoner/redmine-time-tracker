@@ -105,11 +105,11 @@
                 <br />
 
                 <div class="tab-pane active" id="new">
-                    <custom:book-entry-form formId="newBookEntry" edit="false" />
+                    <custom:new-book-entry-form />
                 </div>
 
                 <div class="tab-pane" id="selected">
-                    <custom:book-entry-form formId="editBookEntry" edit="true" />
+                    <custom:edit-book-entry-form />
                 </div>
 
                 <div class="tab-pane" id="favorites">
