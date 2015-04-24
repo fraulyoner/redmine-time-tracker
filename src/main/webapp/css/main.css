@@ -2,6 +2,10 @@
    Custom style
    ========================================================================== */
 
+body {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
 
 .fc-header-title h2 {
     font-size: 1.5em;

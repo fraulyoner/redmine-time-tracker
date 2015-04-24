@@ -9,26 +9,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Redmine Time Tracker</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <script src="<c:url value='/calendar/lib/jquery.min.js' />"></script>
-    <script src="<c:url value='/calendar/lib/jquery-ui.custom.min.js' />"></script>
-    <script src="<c:url value='/js/underscore-min.js' />"></script>
-    <script src="<c:url value='/js/date.js' />"></script>
-
-    <link rel="stylesheet" href="<c:url value='/css/bootstrap.min.css' />">
-    <style>
-        body {
-            padding-top: 100px;
-            padding-bottom: 20px;
-        }
-    </style>
-    <link rel="stylesheet" href="<c:url value='/css/bootstrap-theme.min.css' />">
+    <script src="<c:url value='/lib/jquery/dist/jquery.min.js' />"></script>
+    <link rel="stylesheet" href="<c:url value='/lib/bootstrap/dist/css/bootstrap.min.css' />">
+    <link rel="stylesheet" href="<c:url value='/lib/bootstrap/dist/css/bootstrap-theme.min.css' />">
     <link rel="stylesheet" href="<c:url value='/css/main.css' />">
 
-    <script src="<c:url value='/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js' />"></script>
+    <script src="<c:url value='/lib/modernizr-2.6.2-respond-1.1.0.min.js' />"></script>
 
 </head>
 <body>
@@ -97,7 +87,7 @@
     </footer>
 </div> <!-- /container -->
 
-<script src="<c:url value='/js/vendor/bootstrap.min.js' />"></script>
+<script src="<c:url value='/lib/bootstrap/dist/js/bootstrap.min.js' />"></script>
 
 </body>
 </html>

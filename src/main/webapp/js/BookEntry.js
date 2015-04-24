@@ -85,8 +85,8 @@ var BookEntry = {
     event.day = new Date(day).toString("yyyy-MM-dd");
 
     if (start && end) {
-      event.start = new Date(day).at(start).toString();
-      event.end = new Date(day).at(end).toString();
+      event.start = new Date(day).at(start).toUTCString();
+      event.end = new Date(day).at(end).toUTCString();
     } else {
       var now = new Date().getTime();
 
@@ -117,8 +117,8 @@ var BookEntry = {
 
       var currentTimePlusThirtyMinutes = new Date(laterTime).getHours() + ":" + new Date(laterTime).getMinutes();
 
-      event.start = new Date(day).at(currentTime).toString();
-      event.end = new Date(day).at(currentTimePlusThirtyMinutes).toString();
+      event.start = new Date(day).at(currentTime).toUTCString();
+      event.end = new Date(day).at(currentTimePlusThirtyMinutes).toUTCString();
     }
 
     event.comment = form.find("textarea.comment").val();
@@ -149,8 +149,8 @@ var BookEntry = {
       form.find("select.activity").val(bookEntry.activityId);
     });
 
-    form.find("input.start").val(bookEntry.start.toString("HH:mm"));
-    form.find("input.end").val(bookEntry.end.toString("HH:mm"));
+    form.find("input.start").val(new Date(bookEntry.start).toString("HH:mm"));
+    form.find("input.end").val(new Date(bookEntry.end).toString("HH:mm"));
     form.find("textarea.comment").val(bookEntry.comment);
     form.find("input.color").val(bookEntry.color);
 
@@ -209,8 +209,8 @@ var BookEntry = {
 
     if (bookEntry.id == id) {
       editForm.find("p.duration").html(duration);
-      editForm.find("input.start").val(bookEntry.start.toString("HH:mm"));
-      editForm.find("input.end").val(bookEntry.end.toString("HH:mm"));
+      editForm.find("input.start").val(new Date(bookEntry.start).toString("HH:mm"));
+      editForm.find("input.end").val(new Date(bookEntry.end).toString("HH:mm"));
     }
 
 
