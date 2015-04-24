@@ -36,8 +36,8 @@ var Calendar = {
     },
     allDaySlot: false,
     slotDuration: '00:15:00',
-//    minTime: "06:00:00",
-//    maxTime: "22:00:00",
+    minTime: "06:00:00",
+    maxTime: "22:00:00",
     slotEventOverlap: false,
     height: 700
 
