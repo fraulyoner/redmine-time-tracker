@@ -127,7 +127,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Aljona Murygina 2014</p>
+        <p class="pull-right text-muted"><a href="https://github.com/murygina/redmine-time-tracker">View project on GitHub</a></p>
     </footer>
 </div> <!-- /container -->
 
