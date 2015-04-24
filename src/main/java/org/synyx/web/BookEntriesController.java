@@ -55,7 +55,7 @@ public class BookEntriesController {
 
         Issue issue = manager.getIssueById(bookEntry.getIssueId());
 
-        String title = String.format("#%d %s", bookEntry.getIssueId(), issue.getSubject());
+        String title = String.format("%s - #%d %s", issue.getProject(), bookEntry.getIssueId(), issue.getSubject());
 
         bookEntry.setTitle(title);
 
