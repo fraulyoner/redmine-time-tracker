@@ -1,0 +1,82 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="murygina (generated)" id="create_table_BookEntry">
+        <createTable tableName="BookEntry">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="allDay" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end" type="VARCHAR(255)"/>
+            <column name="start" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="comment" type="VARCHAR(255)"/>
+            <column name="color" type="VARCHAR(255)"/>
+            <column name="duration" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="day" type="VARCHAR(255)"/>
+            <column name="activityId" type="INT(10)"/>
+            <column name="issueId" type="INT(10)"/>
+            <column name="redmineId" type="INT(10)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="murygina (generated)" id="create_table_Favorite">
+        <createTable tableName="Favorite">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="activityId" type="INT(10)"/>
+            <column name="allDay" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="VARCHAR(255)"/>
+            <column name="duration" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end" type="VARCHAR(255)"/>
+            <column name="issueId" type="INT(10)"/>
+            <column name="redmineId" type="INT(10)"/>
+            <column name="start" type="VARCHAR(255)"/>
+            <column name="title" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="murygina (generated)" id="create_table_Redmine">
+        <createTable tableName="Redmine">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="apiKey" type="VARCHAR(255)"/>
+            <column name="link" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="murygina (generated)" id="create_table_TimeEntryActivity">
+        <createTable tableName="TimeEntryActivity">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="activityId" type="INT(10)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="redmine_id" type="INT(10)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="murygina (generated)" id="create_foreign_key_contraint_TimeEntryActivity_Redmine">
+        <addForeignKeyConstraint
+                baseColumnNames="redmine_id"
+                baseTableName="TimeEntryActivity"
+                constraintName="FK_TimeEntryActivity_Redmine"
+                deferrable="false"
+                initiallyDeferred="false"
+                onDelete="NO ACTION"
+                onUpdate="NO ACTION"
+                referencedColumnNames="id"
+                referencedTableName="Redmine"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Custom style
+   ========================================================================== */
+
+
+.fc-header-title h2 {
+    font-size: 1.5em;
+}
+
+span.add-favorite {
+   float: right;
+}
+
+span.add-favorite:hover {
+    color: #428BCA;
+    cursor: pointer;
+}
+
+span.remove-favorite {
+    float: left;
+    margin-right: 10px;
+}
+
+span.remove-favorite:hover {
+    color: #428BCA;
+    cursor: pointer;
+}
+
+.sufficient {
+    color: #31a354;
+}
+
+.insufficient {
+    color: #de2d26;
+}
+
+.modal {
+  top: 30%;
+  font-size: 15px;  
+}
+
+.modal .btn {
+    text-align: right;
+}
+
+.modal.success .modal-header {
+    background-color: #DFF0D8;
+    color: #3C763D;
+}
+
+.modal.success .modal-body {
+    color: #3C763D;
+}
+
+.modal.error .modal-header {
+    background-color: #F2DEDE;
+    color: #A94442;
+}
+
+.modal.error .modal-body {
+    color: #A94442;
+}
+
+.popover {
+    min-width: 200px;
+    max-width: 400px;
+    margin-left: 230px;
+}

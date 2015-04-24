@@ -1,0 +1,11 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <include file="db/changelog-0.1.0-initial.xml"/>
+    <include file="db/changelog-0.1.1-add-column-tracked-to-book-entry.xml"/>
+    <include file="db/changelog-0.1.2-remove-column-color-from-book-entry.xml"/>
+
+</databaseChangeLog>
