@@ -28,7 +28,7 @@ var Calendar = {
     weekNumbers: true,
     weekNumberTitle: 'KW ',
     titleFormat: {
-      day: 'dddd, d. MMMM YYYY'
+      day: 'dddd, D. MMMM YYYY'
     },
     axisFormat: 'H:mm',
     timeFormat: {
