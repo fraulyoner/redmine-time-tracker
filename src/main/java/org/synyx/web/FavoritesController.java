@@ -96,7 +96,7 @@ public class FavoritesController {
 
         Favorite favorite = favoriteDAO.findOne(bookFavoriteRequest.getFavoriteId());
 
-        BookEntry bookEntry = favorite.generateBookEntry(bookFavoriteRequest.getDay(), bookFavoriteRequest.getColor());
+        BookEntry bookEntry = favorite.generateBookEntry(bookFavoriteRequest.getDay());
 
         bookEntryDAO.save(bookEntry);
 

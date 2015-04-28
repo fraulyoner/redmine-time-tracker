@@ -25,8 +25,6 @@ public class Favorite extends AbstractPersistable<Integer> {
 
     private double duration;
 
-    private Integer activityId;
-
     private String comment;
 
     private boolean allDay;
@@ -127,18 +125,6 @@ public class Favorite extends AbstractPersistable<Integer> {
     }
 
 
-    public Integer getActivityId() {
-
-        return activityId;
-    }
-
-
-    public void setActivityId(Integer activityId) {
-
-        this.activityId = activityId;
-    }
-
-
     @Override
     protected void setId(Integer id) {
 
@@ -146,7 +132,7 @@ public class Favorite extends AbstractPersistable<Integer> {
     }
 
 
-    public BookEntry generateBookEntry(String day, String color) {
+    public BookEntry generateBookEntry(String day) {
 
         BookEntry bookEntry = new BookEntry();
 
@@ -170,7 +156,6 @@ public class Favorite extends AbstractPersistable<Integer> {
         bookEntry.setEnd(end);
 
         bookEntry.setDuration(this.duration);
-        bookEntry.setActivityId(this.activityId);
         bookEntry.setComment(this.comment);
         bookEntry.setAllDay(this.allDay);
 

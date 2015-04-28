@@ -28,8 +28,6 @@ public class BookEntry extends AbstractPersistable<Integer> {
 
     private double duration;
 
-    private Integer activityId;
-
     private String comment;
 
     private boolean allDay;
@@ -149,18 +147,6 @@ public class BookEntry extends AbstractPersistable<Integer> {
     public void setIssueId(Integer issueId) {
 
         this.issueId = issueId;
-    }
-
-
-    public Integer getActivityId() {
-
-        return activityId;
-    }
-
-
-    public void setActivityId(Integer activityId) {
-
-        this.activityId = activityId;
     }
 
 
