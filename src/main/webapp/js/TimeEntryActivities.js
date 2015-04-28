@@ -1,10 +1,8 @@
 var TimeEntryActivities = {
 
-    render: function(formId, callback) {
+    render: function($el, redmineId) {
 
-        var selectedRedmine = $("form#" + formId + " select.redmine").val();
-
-        this.load(selectedRedmine, function(data) {
+        this.load(redmineId, function(data) {
 
             var options = "";
             var activities = data.responseJSON;
@@ -13,22 +11,19 @@ var TimeEntryActivities = {
 
                 options += "<option value='" + activity.activityId + "'>" + activity.name + "</option>";
 
-            })
+            });
 
-            $("#" + formId + " select.activity").html(options);
-
-          if(callback) {
-            callback("Loaded time entry activities for redmine with id=" + selectedRedmine);
-          }
+          $el.attr("data-redmine", redmineId);
+          $el.html(options);
 
         });
 
     },
 
-    load: function(selectedRedmine, callback) {
+    load: function(redmineId, callback) {
 
         $.ajax({
-            url: "http://localhost:2342/activities?redmineId=" + selectedRedmine,
+            url: "http://localhost:2342/activities?redmineId=" + redmineId,
             async: true,
             dataType: "json",
             contentType: "application/json; charset=utf-8",

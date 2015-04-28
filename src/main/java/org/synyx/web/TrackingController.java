@@ -66,7 +66,7 @@ public class TrackingController {
         timeEntry.setIssueId(bookEntry.getIssueId());
         timeEntry.setSpentOn(bookEntry.getDate().toDate());
         timeEntry.setHours(tracking.getDuration());
-        timeEntry.setActivityId(bookEntry.getActivityId());
+        timeEntry.setActivityId(tracking.getActivityId());
         timeEntry.setComment(tracking.getComment());
 
         Redmine redmine = redmineDAO.findOne(bookEntry.getRedmineId());

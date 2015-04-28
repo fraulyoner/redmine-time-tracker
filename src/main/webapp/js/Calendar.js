@@ -192,6 +192,12 @@ var Calendar = {
 
     $("#issueId").html("#" + event.issueId);
 
+    var $activitySelect = $("#activity");
+
+    if($activitySelect.attr("redmineId") !== event.redmineId) {
+      TimeEntryActivities.render($activitySelect, event.redmineId);
+    }
+
     $("#comments").append("<div class=\"well\" id=\"" + event.id + "\">" +
       "<span>" + event.duration + " Stunden<br />" + event.comment + "</span>" +
       "</div>");
@@ -266,6 +272,7 @@ var Calendar = {
     $("#comments").empty();
     $("#issueId").empty();
     $("#duration").html("0");
+    $("#activity").empty();
     $("form .comment").val("");
     CharCounter.count($("#trackingForm .comment").val(), "#trackingForm span.char-counter");
 

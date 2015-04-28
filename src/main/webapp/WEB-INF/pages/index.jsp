@@ -134,7 +134,6 @@
 <script src="<c:url value='/lib/bootstrap/dist/js/bootstrap.min.js' />"></script>
 
 <script src="<c:url value='/js/CharCounter.js' />"></script>
-<script src="<c:url value='/js/TimeEntryActivities.js' />"></script>
 <script src="<c:url value='/js/Calendar.js' />"></script>
 <script src="<c:url value='/js/BookEntry.js' />"></script>
 <script src="<c:url value='/js/BookEntryForm.js' />"></script>

@@ -145,9 +145,6 @@ var BookEntry = {
     form.find("input.issue").val(bookEntry.issueId);
 
     form.find("select.redmine").val(bookEntry.redmineId);
-    TimeEntryActivities.render(formId, function () {
-      form.find("select.activity").val(bookEntry.activityId);
-    });
 
     form.find("input.start").val(new Date(bookEntry.start).toString("HH:mm"));
     form.find("input.end").val(new Date(bookEntry.end).toString("HH:mm"));
@@ -171,6 +168,7 @@ var BookEntry = {
     json.ids = Calendar.trackingSelection.arrayOfSelectedElements;
     json.color = Calendar.bookedColor;
     json.comment = $("form#trackingForm .comment").val();
+    json.activityId = $("form#trackingForm #activity").val();
     json.duration = Calendar.trackingSelection.duration;
 
     $.ajax({

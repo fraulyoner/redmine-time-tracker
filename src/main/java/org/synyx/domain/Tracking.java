@@ -9,6 +9,7 @@ import java.util.List;
 public class Tracking {
 
     private List<Integer> ids;
+    private Integer activityId;
     private String comment;
     private String color;
     private float duration;
@@ -22,6 +23,18 @@ public class Tracking {
     public void setIds(List<Integer> ids) {
 
         this.ids = ids;
+    }
+
+
+    public Integer getActivityId() {
+
+        return activityId;
+    }
+
+
+    public void setActivityId(Integer activityId) {
+
+        this.activityId = activityId;
     }
 
 

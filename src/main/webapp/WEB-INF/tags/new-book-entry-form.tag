@@ -4,7 +4,7 @@
 
   <div class="form-group">
     <label>Redmine</label>
-    <select class="form-control redmine" onchange="TimeEntryActivities.render('newBookEntry');">
+    <select class="form-control redmine">
       <c:forEach items="${redmines}" var="redmine">
         <option value="${redmine.id}"><c:out value="${redmine.name}"/></option>
       </c:forEach>
@@ -13,18 +13,6 @@
   <div class="form-group">
     <label>Ticketnummer</label>
     <input type="number" class="form-control issue" placeholder="1234">
-  </div>
-  <div class="form-group">
-    <label>Aktivit&auml;t</label>
-    <select class="form-control activity">
-      <script type="text/javascript">
-        $(document).ready(function () {
-          TimeEntryActivities.render("newBookEntry", function (data) {
-            console.log(data);
-          });
-        });
-      </script>
-    </select>
   </div>
   <div class="form-group">
     <label>Kommentar (optional)</label> (<span class="char-counter">0/</span>250)
