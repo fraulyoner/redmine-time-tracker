@@ -18,15 +18,15 @@
     <input type="number" class="form-control issue" placeholder="1234">
   </div>
   <div class="form-group">
-    <label>Von (optional)</label>
+    <label>Von</label>
     <input type="text" class="form-control start" placeholder="HH:mm">
   </div>
   <div class="form-group">
-    <label>Bis (optional)</label>
+    <label>Bis</label>
     <input type="text" class="form-control end" placeholder="HH:mm">
   </div>
   <div class="form-group">
-    <label>Kommentar (optional)</label> (<span class="char-counter">0/</span>250)
+    <label>Kommentar</label> (<span class="char-counter">0/</span>250)
     <textarea class="form-control comment" placeholder="Kommentar" rows="5"
               onkeyup="CharCounter.count(this.value, 'form#editBookEntry span.char-counter');"
               onkeydown="CharCounter.maxChars(this, 250); CharCounter.count(this.value, 'form#editBookEntry span.char-counter');"></textarea>
