@@ -16,6 +16,6 @@ import java.util.List;
 @Repository
 public interface BookEntryDAO extends JpaRepository<BookEntry, Integer> {
 
-    @Query("SELECT x FROM BookEntry x WHERE WEEKOFYEAR(x.day) = ?1 AND YEAR(x.day) = YEAR(now())")
+    @Query("SELECT x FROM BookEntry x WHERE WEEK(x.day) = ?1 AND YEAR(x.day) = YEAR(now())")
     List<BookEntry> getBookEntriesForWeekOfYear(int weekOfYear);
 }

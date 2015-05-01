@@ -19,12 +19,14 @@ git clone https://github.com/murygina/redmine-time-tracker.git
 
 ## Getting started
 
-* Create a MySQL database where your event entries can be stored.
-* Set database configuration (URL and credentials) under `src/main/resources/application.properties`.
-* Run `mvn clean jetty:run`.
+Run
+<pre>
+mvn clean jetty:run
+</pre>
 
 You can access the application now under the URL `localhost:2342`.
 Now you're ready to create events that you can track later in your Redmine/ChiliProject.
+The data is stored in a database file in your project directory under `db` directory.
 
 ## Configuration
 
