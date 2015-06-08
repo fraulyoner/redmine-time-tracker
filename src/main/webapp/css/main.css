@@ -70,3 +70,8 @@ span.remove-favorite:hover {
     max-width: 400px;
     margin-left: 230px;
 }
+
+#tracking-success,
+#tracking-error {
+    display: none;
+}

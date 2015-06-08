@@ -181,11 +181,11 @@ var BookEntry = {
       complete: function (data) {
 
         if (data.status == 200) {
-          $('#modal-success').modal('toggle');
+          $('#tracking-success').show();
           Calendar.refetchEvents();
           Calendar.resetTrackingSelection();
         } else {
-          $('#modal-error').modal('toggle');
+          $('#tracking-error').show();
         }
 
       }

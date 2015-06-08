@@ -58,11 +58,19 @@
 
     <div class="row">
 
-        <!-- Modal for tracking was successful -->
-        <custom:modal modalId="modal-success" modalLabelId="modal-success-label" modalCssClass="success" modalTitle="Erfolgreich gebucht" modalBody="Buchen wurde erfolgreich ausgeführt" />
+        <div class="col-xs-12">
+          <!-- Alert for tracking was successful -->
+          <div class="alert alert-success" id="tracking-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Buchen wurde erfolgreich ausgeführt.
+          </div>
 
-        <!-- Modal for error occurred during tracking -->
-        <custom:modal modalId="modal-error" modalLabelId="modal-error-label" modalCssClass="error" modalTitle="Fehler" modalBody="Buchen konnte nicht ausgeführt werden." />
+          <!-- Alert for error occurred during tracking -->
+          <div class="alert alert-danger" id="tracking-error">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            Buchen konnte nicht ausgeführt werden.
+          </div>
+        </div>
 
         <div class="col-lg-4">
             
