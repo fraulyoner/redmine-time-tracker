@@ -18,6 +18,7 @@ body {
 
 span.add-favorite {
    float: right;
+   margin-left: 10px;
 }
 
 span.add-favorite:hover {
