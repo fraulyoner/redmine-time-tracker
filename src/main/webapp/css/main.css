@@ -11,6 +11,11 @@ body {
     font-size: 1.5em;
 }
 
+.fc-event:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 span.add-favorite {
    float: right;
 }
