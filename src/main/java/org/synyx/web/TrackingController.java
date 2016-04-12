@@ -72,18 +72,14 @@ public class TrackingController {
         Redmine redmine = redmineDAO.findOne(bookEntry.getRedmineId());
         RedmineManager manager = new RedmineManager(redmine.getLink(), redmine.getApiKey());
 
-        try {
-            manager.createTimeEntry(timeEntry);
+        manager.createTimeEntry(timeEntry);
 
-            for (Integer id : tracking.getIds()) {
-                BookEntry entry = bookEntryDAO.findOne(id);
-                entry.setTracked(true);
-                bookEntryDAO.save(entry);
-            }
-
-            return "Successfully booked entries: " + tracking.getIds().toString();
-        } catch (RedmineException ex) {
-            throw ex;
+        for (Integer id : tracking.getIds()) {
+            BookEntry entry = bookEntryDAO.findOne(id);
+            entry.setTracked(true);
+            bookEntryDAO.save(entry);
         }
+
+        return "Successfully booked entries: " + tracking.getIds().toString();
     }
 }
